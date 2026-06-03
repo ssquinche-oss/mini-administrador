@@ -14,7 +14,7 @@ export class TareaController {
 
   @Get()
   findAll() {
-    return this.tareaService.findAll();
+    return this.tareaService.llamarTodos();
   }
 
   @Get(':id')
