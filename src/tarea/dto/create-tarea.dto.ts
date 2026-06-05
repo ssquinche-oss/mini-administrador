@@ -1,6 +1,5 @@
 export class CreateTareaDto {
-    id?: number;
-    Titulo!: string;
-    Prioridad!: string;
-    status!: string;
+  Titulo!: string;
+  Prioridad!: string;
+  Completar?: boolean;
 }

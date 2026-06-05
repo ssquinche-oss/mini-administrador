@@ -9,7 +9,13 @@ export class TareaService {
   constructor(private readonly prismaTareas: PrismaService) {}
 
   create(data: CreateTareaDto) {
-    return this.prismaTareas.tarea.create({data});
+  return this.prismaTareas.tarea.create({
+    data: {
+      Titulo: data.Titulo,
+      Prioridad: data.Prioridad,
+      Completar: data.Completar ?? false,
+    }
+  });
   }
 
   llamarTodos() {
